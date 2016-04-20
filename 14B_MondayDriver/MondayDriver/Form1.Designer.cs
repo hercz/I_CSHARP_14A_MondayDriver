@@ -70,6 +70,7 @@
             this.open_button.TabIndex = 3;
             this.open_button.Text = "Open";
             this.open_button.UseVisualStyleBackColor = true;
+            this.open_button.Click += new System.EventHandler(this.open_button_Click);
             // 
             // delete_button
             // 
