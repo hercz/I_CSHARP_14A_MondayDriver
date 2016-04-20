@@ -44,6 +44,7 @@
             this.drive_ComboBox.Name = "drive_ComboBox";
             this.drive_ComboBox.Size = new System.Drawing.Size(322, 21);
             this.drive_ComboBox.TabIndex = 0;
+            this.drive_ComboBox.SelectedIndexChanged += new System.EventHandler(this.drive_ComboBox_SelectedIndexChanged);
             // 
             // path_TextBox
             // 
@@ -59,6 +60,7 @@
             this.items_ListBox.Name = "items_ListBox";
             this.items_ListBox.Size = new System.Drawing.Size(364, 199);
             this.items_ListBox.TabIndex = 2;
+            this.items_ListBox.Click += new System.EventHandler(this.items_ListBox_Click);
             // 
             // open_button
             // 
@@ -110,6 +112,7 @@
             this.Controls.Add(this.drive_ComboBox);
             this.Name = "Form1";
             this.Text = "Monday Driver";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
