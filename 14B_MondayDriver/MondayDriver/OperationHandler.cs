@@ -31,12 +31,19 @@ namespace MondayDriver
             CurrentPath = PathTextBox.Text + ItemListBox.SelectedItem + "\\";
             ItemListBox.Items.Clear();
             PathTextBox.Text = CurrentPath;
-            ShowDirsAndTexts();
+            if (CurrentPath.EndsWith(@".txt\"))
+            {
+                System.Diagnostics.Process.Start(CurrentPath);
+            }
+            else
+            {
+                ShowDirsAndTexts();
+            }
+            
         }
 
         private void ShowDirsAndTexts()
         {
-
             try
             {
                 string[] dirs = Directory.GetDirectories(CurrentPath);
